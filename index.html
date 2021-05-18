@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3b8a5327cf.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home - Dropbox</title>
+</head>
+
+<body>
+
+    <!--This is the Side Navigation Bar-->
+    <div class="sidenav" id="sidenav">
+
+        <div class="sidenav_container">
+
+            <span class="sidenav_icon">
+                <i class="fab fa-dropbox"></i>
+            </span>
+            <div class="sidenav_List">
+                <a href="#" class="active">Home</a>
+                <a href="#">All files</a>
+                <a href="#">Recents</a>
+                <a href="#">Starred</a>
+                <a href="#">Shared</a>
+                <a href="#">File Requests</a>
+                <a href="#">Deleted Files</a>
+            </div>
+            <span class="privacyLink">
+                <a href="#">Privacy and Legal</a>
+            </span>
+        </div>
+
+    </div>
+    <div class="main">
+        <div class="sidepanel" id="openButton">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="top_section">
+            <div class="Upgrade_account">
+                <a href="#">
+                    <i class="fas fa-arrow-circle-up"></i>
+                    <span class="link">
+                        Upgrade account
+                    </span>
+                </a>
+            </div>
+            <div class="info_row">
+                <ul class="right_info_row">
+                    <li>
+                        <input type="text" name="search" placeholder="Search" class="searchBar">
+                    </li>
+                    <li>
+                        <i class="far fa-question-circle"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-th"></i>
+                    </li>
+                    <li>
+                        <i class="far fa-bell"></i>
+                    </li>
+                    <li>
+                        <button class="google-account">MN</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="left_info_row">
+                <p>Home</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="side_content">
+                <ul class="rightSideBar_list">
+                    <li>
+                        <div class="createNewFile">
+                            <button class="create_btn">
+                                Create new file
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-file-upload"></i>
+                            Upload files
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-folder-open"></i>
+                            Upload folder
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-folder"></i>
+                            New folder
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-folder-plus"></i>
+                            New shared folder
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_content">
+                <div class="main_content_section">
+                    <p class="section_header">
+                        Suggested from your activity
+                        <span class="hidebtn" id="hide_Suggestions">Hide</span>
+                    </p>
+                    <div class="main_section_content alertMsg" id="suggestion_content">
+                        As you use Dropbox, suggested items will automatically show up here. <span class="link">Learn
+                            more</span>
+                    </div>
+                </div>
+                <div class="main_content_section">
+                    <p class="section_header">
+                        Recent
+                        <span class="hidebtn" id="hide_Recent">Hide</span>
+                    </p>
+                    <div class="main_section_content" id="recent_content">
+                        <div class="item">
+                            <a href="#">
+                                <div class="itemLogo">
+                                    <img src="Images/powerPoint.png" alt="ppt" width="47" height="30">
+                                </div>
+                                <ul class="itemOptions">
+                                    <li>
+                                        <span class="linkBtn">
+                                            Share
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="linkBtn">
+                                            Open
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="more">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <div class="itemInfo">
+                                    <span class="itemTitle">
+                                        Chapter 1: Introduction
+                                    </span>
+                                    <span class="saved">
+                                        <i class="far fa-star saveBtn" id="saveBtn"></i>
+                                    </span>
+                                    <br>
+                                    <span>
+                                        Opened 15 minutes ago.
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_content_section">
+                    <p class="section_header">
+                        Starred
+                        <span class="hidebtn" id="hide_Starred">Hide</span>
+                    </p>
+                    <div class="main_section_content alertMsg" id="starred_content">
+
+                        No starred items found!
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            //Used for the Burger Menu when the screen is resized
+            document.getElementById("openButton").addEventListener("click", function () {
+
+                if (document.getElementById("sidenav").style.display == "none") {
+                    document.getElementById("sidenav").style.setProperty("display", "block");
+                    document.getElementById("sidenav").style.setProperty("z-index", "1");
+                } else {
+                    document.getElementById("sidenav").style.setProperty("display", "none");
+                }
+
+            });
+
+            //Used to close the Burger menu when the user clicks outside the side Bar
+            document.addEventListener('mouseup', function (e) {
+                if (!document.getElementById("sidenav").contains(e.target) && window.innerWidth <= 735) {
+                    document.getElementById("sidenav").style.display = "none";
+                }
+            });
+
+            //Used to show/hide the SideBar when the User resizes the screen
+            window.addEventListener('resize', function () {
+
+                if (window.innerWidth > 735) {
+                    document.getElementById("sidenav").style.display = "initial";
+                } else {
+                    document.getElementById("sidenav").style.display = "none";
+                }
+
+            });
+
+            //Used for the hide buttons
+            document.getElementById("hide_Suggestions").addEventListener("click", function () {
+
+                if (document.getElementById("hide_Suggestions").innerHTML == "Hide") {
+
+                    document.getElementById("hide_Suggestions").innerHTML = "Show";
+                    document.getElementById("suggestion_content").style.setProperty("display", "none");
+
+                } else {
+
+                    document.getElementById("hide_Suggestions").innerHTML = "Hide";
+                    document.getElementById("suggestion_content").style.setProperty("display", "initial");
+
+                }
+
+            });
+
+            //Used for the hide buttons
+            document.getElementById("hide_Recent").addEventListener("click", function () {
+
+                if (document.getElementById("hide_Recent").innerHTML == "Hide") {
+
+                    document.getElementById("hide_Recent").innerHTML = "Show";
+                    document.getElementById("recent_content").style.setProperty("display", "none");
+
+                } else {
+
+                    document.getElementById("hide_Recent").innerHTML = "Hide";
+                    document.getElementById("recent_content").style.setProperty("display", "initial");
+
+                }
+
+            });
+
+            //Used for the hide buttons
+            document.getElementById("hide_Starred").addEventListener("click", function () {
+
+                if (document.getElementById("hide_Starred").innerHTML == "Hide") {
+
+                    document.getElementById("hide_Starred").innerHTML = "Show";
+                    document.getElementById("starred_content").style.setProperty("display", "none");
+
+                } else {
+
+                    document.getElementById("hide_Starred").innerHTML = "Hide";
+                    document.getElementById("starred_content").style.setProperty("display", "initial");
+
+                }
+
+            });
+
+            //Used to change the icon from save to not saved
+            document.getElementById("saveBtn").addEventListener("click", function () {
+                console.log('test');
+                if (document.getElementById("saveBtn").classList.contains("far")) {
+
+                    document.getElementById("saveBtn").className = "fas fa-star saveBtn";
+
+                } else {
+                    document.getElementById("saveBtn").className = "far fa-star saveBtn";
+                }
+
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
