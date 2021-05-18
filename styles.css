@@ -132,7 +132,7 @@ input[type=text].searchBar{
     border: 1px solid #ccc;
     font-size: 15px;
     padding:6px 10px 6px 35px;
-    background: url(../Images/searchIcon.png) no-repeat left;
+    background: url(searchIcon.png) no-repeat left;
     background-size: 16px 16px;
     background-position-x: 10px;
     z-index: 2;
