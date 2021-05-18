@@ -1,0 +1,378 @@
+body{
+    color: #0d2481;
+    font-family: 'Roboto', sans-serif;
+}
+
+.link{
+    cursor: pointer;
+    color: #0061ff;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.sidepanel{
+    display: none;
+}
+
+.sidenav{
+    height: 100%;
+    display: initial;
+    width: 33vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color:#f2f2f2;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav_container{
+    height:80%;
+    margin-top: 40px;
+}
+
+.sidenav_icon{
+    font-size: 31px;
+    padding-left: 40px;    
+}
+
+.sidenav_List{
+    margin-top:35px;
+}
+
+.sidenav a{
+    padding: 14px 40px;    
+    text-decoration: none;
+    font-size: 17px;
+    color: #666666;
+    display:block;
+    transition: 0.5s;
+}
+
+a.active{
+    color:#000000;
+}
+
+.privacyLink{
+    position:absolute;
+    bottom: 10px;
+}
+
+.privacyLink a{
+    font-size: 14px;
+}
+
+.top_section{
+    position: relative;
+    top:0;
+}
+
+.main{
+    margin-left: 37vh;
+    margin-right:2vh;
+}
+
+.top_section{
+    display: block;
+}
+
+.Upgrade_account{
+    display: inline-block;
+    width: 100%;
+}
+
+.Upgrade_account a{
+    position:absolute;
+    right: 20px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.Upgrade_account a i{
+    color:black;
+}
+
+.info_row{
+    margin-top: 15px;
+    display: block;
+    position: relative;
+}
+
+ul.right_info_row{
+    width: 60vh;
+    padding-inline-start: 0px;
+    float: right;
+    display: inline-flex; 
+    list-style-type: none;
+}
+
+ul.right_info_row li{
+    padding-left: 2.7vh;
+}
+
+ul.right_info_row li:first-child{
+    padding-left: 0;
+}
+
+li i{
+    color: #000000;
+    padding: 6px;
+    font-size: 20px;
+}
+
+ul.right_info_row li i:hover{
+    background-color: #ececec;
+}
+
+input[type=text].searchBar{
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    padding:6px 10px 6px 35px;
+    background: url(../Images/searchIcon.png) no-repeat left;
+    background-size: 16px 16px;
+    background-position-x: 10px;
+    z-index: 2;
+}
+
+input[type=text].searchBar:hover{
+    border: 1px solid black;
+}
+
+.google-account{
+    background-color: #78286e;
+    color:white;
+    height:32px;
+    width:32px;
+    padding: 0;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 50%;
+    text-transform: uppercase;
+}
+
+.left_info_row{
+    margin-left:2vh;
+    margin-top: 4vh;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.content{
+    margin-top:30px;
+    width: 100%;
+}
+
+.side_content{
+    float:right;
+    margin-top:20px;
+    margin-right: 10px;
+    width:37vh;
+}
+
+ul.rightSideBar_list{
+    list-style-type: none;
+    float: left;
+}
+
+ul.rightSideBar_list li{
+    margin-top:15px;
+    font-size:14px;
+    font-weight: 300;
+}
+
+ul.rightSideBar_list li a{
+    text-decoration: none;
+    color:#000000;    
+}
+
+ul.rightSideBar_list li i{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+ul.rightSideBar_list li:first-child{
+    margin-top: 0;
+}
+
+.create_btn{
+    background-color:#0d2481;
+    color:white;
+    padding: 4px 8px 6px 10px;
+    font-size:14px;
+    font-weight: bold;
+    border:none;
+    cursor:pointer;
+}
+
+.create_btn:hover{
+    background-color: #1c3da3;
+}
+
+.create_btn i{
+    color: white;
+    margin-left:2px;
+    font-size: 6px;
+}
+
+.main-content{
+    margin-right: 37vh;
+}
+
+.main_content_section{
+    margin-top: 1vh;
+    margin-left: 2vh;
+    margin-right: 37vh;
+    color:black;
+}
+
+.section_header{
+    font-size: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.hidebtn{
+    font-size:12px;
+    font-weight: 500;
+    float:right;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.hidebtn:hover{
+    border-bottom: 1px solid black;
+}
+
+.main_section_content{
+    color: rgba(0,0,0,0.7);
+    font-size: 14px;
+    margin-bottom:40px;
+}
+
+.item{
+    font-size: 12px;
+    padding: 15px 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.item:hover{
+    background-color: rgba(0,0,0,0.05);
+}
+
+.item a{
+    text-decoration: none;
+    color: rgba(0,0,0,0.25);
+}
+
+.itemLogo{
+    position:fixed;
+    float:left;
+    width: 10%;
+}
+
+.itemInfo{
+    margin-left: 10%;
+}
+
+ul.itemOptions{
+    margin:0;
+    display: inline-flex;
+    float: right;
+    list-style-type: none;
+    align-items: center;
+}
+
+.item .more{
+    color: black;
+    font-size: 18px;
+}
+
+.item .linkBtn{
+    color: black;
+    font-size:16px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: rgba(97, 50, 50, 0.2);
+    display: none;
+}
+
+.item:hover .linkBtn{
+    display: initial;
+}
+
+.itemTitle{
+    font-size: 14px;
+    color:black;
+}
+
+.alertMsg{
+    margin-top:15px;
+}
+
+.saveBtn{
+    color:black;
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    .Upgrade_account{
+        display: none;
+    }
+
+    .side_content{
+        display: none;
+    }
+
+    .content{
+        margin-top: 10vh;
+    }
+
+    .main-content, .main_content_section{
+        margin-right: 0;
+    }
+
+    ul.right_info_row{
+        display: inline-flex;
+        width: 100%;
+        float: right;
+        margin-left: 2vh;
+    }
+
+    input[type=text].searchBar{
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .sidenav{
+        display: initial;
+    }
+
+}
+
+@media only screen and (max-width: 735px){
+
+    .sidenav{
+        display: none;
+    }
+
+    .main{
+        margin-left: 2vh;
+    }
+
+    .sidepanel{
+        color: black;
+        display: inline;
+        font-size: 24px;
+        cursor:pointer;
+    }
+
+}
